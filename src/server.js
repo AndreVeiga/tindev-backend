@@ -4,6 +4,8 @@ const mongoose = require('mongoose')
 
 const cors = require('cors')
 
+const port = process.env.PORT || 3333
+
 mongoose.connect('mongodb+srv://machadoandre:machadoandre@cluster0-osefg.mongodb.net/tindev?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -19,5 +21,5 @@ server.use(express.json())
 
 server.use(routes)
 
-server.listen(3333, () => console
+server.listen(port, () => console
             .log('Servidor rodando na porta localhost/3333'))
